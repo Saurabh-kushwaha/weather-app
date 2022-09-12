@@ -35,7 +35,9 @@ function App() {
     }
   }, [curetWeather])
   const getAllWeatherData = async (lat, lon) => {
-    var data = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,alerts&units=metric&appid=464b8ad26080a86663b083a95e5d7e41`)
+    var data = await axios.get(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,alerts&units=metric&APPID=72944581245754b3378f024aabca2e83`
+    );
     const result = data;
     setTemp(result.data)
     console.log(result, "result");
