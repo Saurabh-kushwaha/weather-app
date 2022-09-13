@@ -5,7 +5,7 @@ export const weatherapi = (city)=>async(dispatch)=>{
     dispatch(get_weather_request())
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=72944581245754b3378f024aabca2e83`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=464b8ad26080a86663b083a95e5d7e41`
       )
       .then((res) => {
         console.log(res.data, "redux");
